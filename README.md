@@ -29,7 +29,7 @@ Regitration Number: 212221240028
 Name: Meena .S
 ```
 ## PRGORAM :
-
+```
 ### NORMAL RPM:
 const int motorPin1 = 5;
 const int motorPin2 = 6;
@@ -58,8 +58,9 @@ void loop()
               delay(5);
             }
 
+```
 
-            
+```            
 ### TO CONTROL RPM:
 #define motorIn1 5
 #define motorIn2 6
@@ -88,6 +89,7 @@ void clockwise(int speed)
   analogWrite(motorIn1,0);
   analogWrite(motorIn2,speed);
 }
+```
 ## OUTPUT :
 ## CIRCUIT DIAGRAM:
 ![image](https://user-images.githubusercontent.com/94677128/198260545-727a49b2-cb09-4256-88b0-9a0a09204817.png)
@@ -99,6 +101,7 @@ void clockwise(int speed)
 ### COUNTER CLOCKWISE:
 ![198178573-b68698f2-339c-4c45-90d4-b3edf203ad99](https://user-images.githubusercontent.com/94677128/198263160-a567a3dd-62eb-4fbd-8178-d884bf7e7db5.png)
 ### GRAPH:
+![198178620-06561add-6c48-4d55-98e1-d7b2830742e9](https://user-images.githubusercontent.com/94677128/198263776-c91c597a-584e-45ee-8f91-7b223e92f2cf.png)
 
 ## RESULTS AND DISCUSSION :
 Thus, the speed and the direction of a DC motor using L293D driver ic( H- bridge) is controlled.
