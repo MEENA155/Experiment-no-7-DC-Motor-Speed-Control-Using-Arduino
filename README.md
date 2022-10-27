@@ -24,7 +24,10 @@ The L293D driver has 2 VCCs: VCC1 is +5V and VCC2 is +12V (same as motor nominal
 TABLE-01 EXITATION TABLE FOR H BRIDGE 
 
 As shown in the circuit diagram we need only 3 Arduino terminal pins, pin 8 is for the push button which toggles the motor direction of rotation. Pins 9 and 10 are PWM signal outputs, at any time there is only 1 active PWM, this allows us to control the direction as well as the speed by varying the duty cycle of the PWM signal. The active PWM pin decides the motor direction of rotation (one at a time, the other output is logic 0).
-
+```
+Regitration Number: 212221240028
+Name: Meena .S
+```
 ## PRGORAM :
 
 ### NORMAL RPM:
@@ -90,6 +93,12 @@ void clockwise(int speed)
 ![image](https://user-images.githubusercontent.com/94677128/198260545-727a49b2-cb09-4256-88b0-9a0a09204817.png)
 ## READINGS:
 ### CLOCKWISE:
+![Screenshot (142)](https://user-images.githubusercontent.com/94677128/198262603-0e7e392d-bd64-41cb-bc78-e2d90e5d5065.png)
+### GRAPH:
+![198178533-1435f643-d4b1-48ca-8283-a3a2d2c34eee](https://user-images.githubusercontent.com/94677128/198262988-0b0bdc3e-35e2-48d9-9878-8bba6312bc08.png)
+### COUNTER CLOCKWISE:
+![198178573-b68698f2-339c-4c45-90d4-b3edf203ad99](https://user-images.githubusercontent.com/94677128/198263160-a567a3dd-62eb-4fbd-8178-d884bf7e7db5.png)
+### GRAPH:
 
 ## RESULTS AND DISCUSSION :
 Thus, the speed and the direction of a DC motor using L293D driver ic( H- bridge) is controlled.
