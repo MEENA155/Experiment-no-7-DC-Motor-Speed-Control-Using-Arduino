@@ -25,9 +25,71 @@ TABLE-01 EXITATION TABLE FOR H BRIDGE
 
 As shown in the circuit diagram we need only 3 Arduino terminal pins, pin 8 is for the push button which toggles the motor direction of rotation. Pins 9 and 10 are PWM signal outputs, at any time there is only 1 active PWM, this allows us to control the direction as well as the speed by varying the duty cycle of the PWM signal. The active PWM pin decides the motor direction of rotation (one at a time, the other output is logic 0).
 
-### PRGORAM 
+## PRGORAM :
 
-### OUTPUT
+### NORMAL RPM:
+const int motorPin1 = 5;
+const int motorPin2 = 6;
+void setup()
+{
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);  
+}
 
-### RESULTS AND DISCUSSION 
+void loop()
+{
+  clockwise(255);
+  delay(3000);
+  counterClockwise(64);
+  delay(3000);
+ }       
+ void counterClockwise(int Speed)
+            {
+              analogWrite(motorPin1,Speed);
+              analogWrite(motorPin2,0);
+            }
+            void clockwise(int Speed)
+            {
+              analogWrite(motorPin1,0);
+              analogWrite(motorPin2,Speed);
+              delay(5);
+            }
 
+
+            
+### TO CONTROL RPM:
+#define motorIn1 5
+#define motorIn2 6
+
+void setup()
+{
+  pinMode(motorIn1,OUTPUT);
+  pinMode(motorIn2,OUTPUT);
+}
+void loop()
+{
+  clockwise(0);
+  delay(3000);
+  counterclockwise(50);
+  delay(3000);
+}
+void counterclockwise(int speed)
+{
+  analogWrite(motorIn1,speed);
+  analogWrite(motorIn2,0);
+}
+
+void clockwise(int speed)
+{
+  
+  analogWrite(motorIn1,0);
+  analogWrite(motorIn2,speed);
+}
+## OUTPUT :
+## CIRCUIT DIAGRAM:
+![image](https://user-images.githubusercontent.com/94677128/198260545-727a49b2-cb09-4256-88b0-9a0a09204817.png)
+## READINGS:
+### CLOCKWISE:
+
+## RESULTS AND DISCUSSION :
+Thus, the speed and the direction of a DC motor using L293D driver ic( H- bridge) is controlled.
